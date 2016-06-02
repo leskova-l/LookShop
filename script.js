@@ -59,8 +59,15 @@ $(function () {
 
     function dropdown(){
         var id = $(this).data("toggle");
-        $(""+id+"").show();
+        $(""+id+"").slideToggle();
     }
 
-     
+    //if (window.screen.width <= '767' || window.innerWidth <= '767') {
+    //    $("#gallery ol>li:gt(0)").hide();
+    //}
+    //else { $("#gallery ol>li:gt(0)").show(); }
+
+    $("#one").click(function () {
+        $("#two ol>li:gt(0)").slideToggle();
+    })
 })

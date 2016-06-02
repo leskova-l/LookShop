@@ -637,20 +637,30 @@ ul#menu{
         margin: 0 0 25px;
     }
 
-    #gallery .indicators {
+    #gallery>button{
+        background: #f4845d;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        width: 87px;
+        height: 86px;
+        font-size: 120%;
+    }
+
+    #gallery #two  {
         position: relative;
         bottom: 0;
         left: 0;
     }
 
-        #gallery .indicators li {
+        #gallery #two li {
             display: block;
             height: 88px;
-            background: #fd926d;
+            background: #f4845d;
             color: #fff;
         }
 
-            #gallery .indicators li:hover, #gallery .indicators li.active {
+            #gallery #two .indicators li:hover, #gallery .indicators li.active {
                 background: #f4845d;
             }
 
