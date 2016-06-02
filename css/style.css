@@ -273,7 +273,7 @@ ul#menu{
     position: relative;
 }
 
-    #gallery .indicators {
+    #gallery .indicators-md {
         position: absolute;
         list-style: none;
         bottom: 477px;
@@ -283,7 +283,7 @@ ul#menu{
         width: auto;
     }
 
-        #gallery .indicators li {
+        #gallery .indicators-md li {
             display: inline-block;
             width: auto;
             height: auto;
@@ -299,7 +299,7 @@ ul#menu{
             color: #555;
         }
 
-        #gallery .indicators .active, #gallery .control.active {
+        #gallery .indicators-md .active, #gallery .control.active {
             background-color: #fd926d;
             color: #ffffff;
         }
@@ -638,7 +638,7 @@ ul#menu{
     }
 
     #gallery>button{
-        background: #f4845d;
+        background: transparent;
         position: absolute;
         z-index: 10;
         right: 0;
@@ -647,21 +647,24 @@ ul#menu{
         font-size: 120%;
     }
 
-    #gallery #two  {
+    #gallery .indicators-xs  {
         position: relative;
         bottom: 0;
         left: 0;
+        padding:0;
+        margin-bottom: -1px;
     }
 
-        #gallery #two li {
+        #gallery .indicators-xs li {
             display: block;
             height: 88px;
             background: #f4845d;
             color: #fff;
+            padding:25px;
         }
 
-            #gallery #two .indicators li:hover, #gallery .indicators li.active {
-                background: #f4845d;
+            #gallery .indicators-xs li.active {
+                background: #fd926d;
             }
 
     .sale {

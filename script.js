@@ -17,12 +17,15 @@ $(function () {
             $(this).fadeOut();
         }
     }
-
-    $("#gallery .indicators li").click(indicators);
+  
+    $("#gallery .indicators-md li, #gallery .indicators-xs li").click(indicators);
 
     function indicators() {
-        $("#gallery .indicators li").removeClass("active");
-        var num = $(this).addClass("active").data("slide-to");
+        $("#gallery .indicators-md li, #gallery .indicators-xs li").removeClass("active");
+        var num = $(this).data("slide-to");
+        $("#gallery .indicators-xs li:eq(" + num + ")").addClass("active");
+        $("#gallery .indicators-md li:eq(" + num + ")").addClass("active");
+
         $("#gallery .item").removeClass("active");
         $("#gallery .item:eq(" + num + ")").addClass("active");
         sale = $(".item.active .sale");
@@ -54,20 +57,19 @@ $(function () {
         $(this).addClass("active");
         $("#gallery a.left").removeClass("active");
     })
-	
+	//menu
     $(".btn").click(dropdown);
 
     function dropdown(){
         var id = $(this).data("toggle");
         $(""+id+"").slideToggle();
     }
+    
+    //gallery
 
-    //if (window.screen.width <= '767' || window.innerWidth <= '767') {
-    //    $("#gallery ol>li:gt(0)").hide();
-    //}
-    //else { $("#gallery ol>li:gt(0)").show(); }
+    $(".indicators-xs li:gt(0)").hide();
 
     $("#one").click(function () {
-        $("#two ol>li:gt(0)").slideToggle();
+        $("#gallery .indicators-xs li:gt(0)").slideToggle();
     })
 })
