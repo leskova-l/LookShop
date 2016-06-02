@@ -1,21 +1,16 @@
-// JavaScript source code
 $(function () {
     $("#search").focus(search).blur(search);
     function search() {
         $("#search").toggleClass("search");
     }
 
-    var temp = 1;
+    var temp = 0 ;
     $("#loadMore").on("click", load);
     function load() {
-        if (temp == 1) {
-            $("#bagAdd_1").slideDown(1000);
-            temp = 0;
-        }
-        else if (temp == 0) {
-            $("#bagAdd_2").slideDown(1000);
-            $(this).fadeOut();
-        }
+        var goods = $(".goods>div");
+            goods.eq(2).removeClass("hidden-xs");
+            goods.eq(3).removeClass("hidden-xs");
+            $(this).fadeOut()
     }
   
     $("#gallery .indicators-md li, #gallery .indicators-xs li").click(indicators);
@@ -33,16 +28,44 @@ $(function () {
         $("#gallery a.left").addClass("active");
     }
 
-    $("#gallery div.sale").mouseover(function (e) {
-        $(e.currentTarget).addClass("hover");
-    })
-    $("#gallery div.sale").mouseout(function (e) {
-        $(e.currentTarget).removeClass("hover");
-    })
+    //$("#gallery div.sale").mouseover(function (e) {
+    //    $(e.currentTarget).addClass("hover");
+    //})
+    //$("#gallery div.sale").mouseout(function (e) {
+    //    $(e.currentTarget).removeClass("hover");
+    //})
 
     var marginL = 0, width = 250, count = 5.4, sale;
     sale = $(".item.active .sale");
-   
+
+    var screen = $(window).width();
+    $(window).resize(function () {
+        if (screen >= "768" && screen < "992") {
+            count = 3;
+            $("#gallery .inner").css("width", "760px");
+        }
+        else if (screen < "768") {
+            count = 2;
+            width = 305;
+
+            $("#gallery .inner").css("width", "610px");
+
+        }
+    })
+    //if (window.screen.width >= "768" && window.screen.width < "992") {
+    //    count = 3;
+    //    $("#gallery .inner").css("width", "760px");
+    //    $("#gallery div.sale").mouseout(function (e) {
+    //        $(e.currentTarget).removeClass("hover");
+    //    })
+    //}
+    //else if (window.screen.width < "768") {
+    //    count = 2;
+    //    width = 305;
+
+    //    $("#gallery .inner").css("width", "610px");
+
+    //}
 
     $("#gallery a.left").click(function () {
         marginL = Math.min(marginL + count * width, 0);
@@ -57,6 +80,7 @@ $(function () {
         $(this).addClass("active");
         $("#gallery a.left").removeClass("active");
     })
+
 	//menu
     $(".btn").click(dropdown);
 

@@ -336,7 +336,7 @@ ul#menu {
 #gallery .inner {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 1250px;
     height: 477px;
     margin: 0 auto;
 }
@@ -361,7 +361,7 @@ ul#menu {
     position: relative;
 }
 
-    /*#gallery .sale.hover {
+    #gallery .sale.hover {
         width: 242px;
         height: 437px;
         margin: 20px 4px;
@@ -381,32 +381,7 @@ ul#menu {
         #gallery .sale.hover img {
             width: 242px;
             height: 312px;
-        }*/
-
-
-          #gallery .sale:hover {
-        width: 242px;
-        height: 437px;
-        margin: 20px 4px;
-    }
-
-        #gallery .sale:hover::after {
-            content: "";
-            display: block;
-            background: url('../images/icon.png') 55px 100px no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 242px;
-            height: 437px;
         }
-
-        #gallery .sale:hover img {
-            width: 242px;
-            height: 312px;
-        }
-
-
 
 .sale {
     background: #f7f7f7;
@@ -707,24 +682,14 @@ ul#menu {
         #gallery .inner, #gallery .item {
             height: 550px;
         }
-        #gallery .inner .sale, #gallery .inner .sale:hover, #gallery .sale:hover img{
-            width: 275px;
-            height: 489px;
-        }
-
-            #gallery .sale:hover::after {
-            content: none;
-        }
-
-        #gallery .sale:hover img {
+        #gallery .inner .sale{
             width: 274px;
-            height: 361px;
+            height: auto;
         }
-
-
+       
 
     .sale {
-        max-width: 275px;
+        max-width: 274px;
         font-size: 60%;
     }
 
