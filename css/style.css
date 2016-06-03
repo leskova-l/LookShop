@@ -337,6 +337,7 @@ ul#menu {
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 1500px;
     height: 477px;
     margin: 0 auto;
 }
@@ -360,29 +361,6 @@ ul#menu {
     margin: 30px 15px;
     position: relative;
 }
-
-    /*#gallery .sale.hover {
-        width: 242px;
-        height: 437px;
-        margin: 20px 4px;
-    }
-
-        #gallery .sale.hover::after {
-            content: "";
-            display: block;
-            background: url('../images/icon.png') 55px 100px no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 242px;
-            height: 437px;
-        }
-
-        #gallery .sale.hover img {
-            width: 242px;
-            height: 312px;
-        }*/
-
 
     #gallery .sale:hover {
         width: 242px;
