@@ -24,6 +24,7 @@ $(function () {
     sale = $(".item.active .sale");
 
     var screen = $(window).width();
+
     $(window).resize(function () {
         if (screen >= "768" && screen < "992") {
             count = 3;
